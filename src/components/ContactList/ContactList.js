@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import { ContactListItem } from './ContactListItem';
+import { ContactListItem } from '../ContactListItem/ContactListItem';
 import css from './Phonebook.module.css';
-import PropTypes from 'prop-types';
+
 
 export class ContactList extends Component {
   render() {
@@ -18,13 +18,5 @@ export class ContactList extends Component {
   }
 }
 
-ContactListItem.propTypes = {
-  myFilteredContacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-  onDelete: PropTypes.func.isRequired,
-};
+
+

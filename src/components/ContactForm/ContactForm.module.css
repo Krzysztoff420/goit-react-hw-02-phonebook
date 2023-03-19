@@ -1,9 +1,9 @@
-.header {
+/* .header {
   font-size: 45px;
   padding: 0;
-}
+} */
 
-/* .form {
+.form {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
   cursor: pointer;
 }
 
-.list {
+/* .list {
   font-size: 16px;
 }
 

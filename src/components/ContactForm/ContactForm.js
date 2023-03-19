@@ -1,5 +1,6 @@
 import { Component } from 'react';
-import css from './Phonebook.module.css';
+import css from './ContactForm.module.css';
+import PropTypes from 'prop-types';
 
 export class ContactForm extends Component {
   state = {
@@ -56,3 +57,14 @@ export class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  myContacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  onFormSubmit: PropTypes.func.isRequired,
+};

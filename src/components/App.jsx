@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
-import { ContactForm } from './ContactForm';
-import { Filter } from './Filter';
-import { ContactList } from './ContactList';
+import { ContactForm } from './ContactForm/ContactForm';
+import { Filter } from './Filter/Filter';
+import { ContactList } from './ContactList/ContactList';
 import css from './Phonebook.module.css';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 export class App extends Component {
   state = {
@@ -72,28 +72,7 @@ export class App extends Component {
   }
 }
 
-ContactForm.propTypes = {
-  myContacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-  onFormSubmit: PropTypes.func.isRequired,
-};
 
-Filter.propTypes = {
-  onFilter: PropTypes.func.isRequired,
-};
 
-ContactList.propTypes = {
-  myFilteredContacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-  onDelete: PropTypes.func.isRequired,
-};
+
+

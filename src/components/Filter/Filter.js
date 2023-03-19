@@ -1,5 +1,6 @@
 import { Component } from 'react';
-import css from './Phonebook.module.css';
+import css from './Filter.module.css';
+import PropTypes from 'prop-types';
 
 export class Filter extends Component {
   handleInputChange = evt => {
@@ -22,3 +23,7 @@ export class Filter extends Component {
     );
   }
 }
+
+Filter.propTypes = {
+  onFilter: PropTypes.func.isRequired,
+};
